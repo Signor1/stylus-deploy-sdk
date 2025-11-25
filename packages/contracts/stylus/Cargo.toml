@@ -1,0 +1,31 @@
+[workspace]
+members = [
+    "templates/token",
+    "templates/nft",
+    "templates/multisig",
+    "templates/governance",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+authors = ["Signordev"]
+repository = "https://github.com/signor1/stylus-deploy-sdk"
+
+[workspace.dependencies]
+# Stylus SDK - check crates.io for latest version
+stylus-sdk = "0.6"
+alloy-primitives = "0.7"
+alloy-sol-types = "0.7"
+
+# Development dependencies
+hex = "0.4"
+
+[profile.release]
+codegen-units = 1
+strip = true
+lto = true
+panic = "abort"
+opt-level = "z"
