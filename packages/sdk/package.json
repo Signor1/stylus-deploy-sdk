@@ -7,25 +7,27 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.js"
     },
     "./react": {
+      "types": "./dist/react.d.ts",
       "import": "./dist/react.mjs",
-      "require": "./dist/react.js",
-      "types": "./dist/react.d.ts"
+      "require": "./dist/react.js"
     }
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format cjs,esm --dts",
-    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "build": "tsup",
+    "dev": "tsup --watch",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
     "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts,.tsx",
     "clean": "rm -rf dist"
   },
   "keywords": [
@@ -33,7 +35,44 @@
     "stylus",
     "sdk",
     "ethereum",
-    "web3"
+    "web3",
+    "deployment"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "author": "Signordev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/signor1/stylus-deploy-sdk",
+    "directory": "packages/sdk"
+  },
+  "dependencies": {
+    "ethers": "^6.11.0",
+    "viem": "^2.7.0"
+  },
+  "devDependencies": {
+    "@tanstack/react-query": "^5.20.0",
+    "@types/react": "^18.2.48",
+    "react": "^18.2.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0",
+    "wagmi": "^2.5.0"
+  },
+  "peerDependencies": {
+    "@tanstack/react-query": "^5.0.0",
+    "react": "^18.0.0",
+    "viem": "^2.0.0",
+    "wagmi": "^2.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@tanstack/react-query": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "wagmi": {
+      "optional": true
+    }
+  }
 }
