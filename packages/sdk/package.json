@@ -1,0 +1,39 @@
+{
+  "name": "@stylus-deploy/sdk",
+  "version": "0.0.0",
+  "description": "TypeScript SDK for deploying Stylus contracts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./react": {
+      "import": "./dist/react.mjs",
+      "require": "./dist/react.js",
+      "types": "./dist/react.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "arbitrum",
+    "stylus",
+    "sdk",
+    "ethereum",
+    "web3"
+  ],
+  "license": "MIT"
+}

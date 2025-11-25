@@ -1,0 +1,9 @@
+node_modules
+dist
+build
+.next
+.turbo
+coverage
+target
+out
+*.wasm

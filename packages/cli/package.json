@@ -1,0 +1,27 @@
+{
+  "name": "@stylus-deploy/cli",
+  "version": "0.0.0",
+  "description": "CLI tools for Stylus Deploy SDK",
+  "bin": {
+    "stylus-deploy": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs --dts",
+    "dev": "tsup src/index.ts --format cjs --dts --watch",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "arbitrum",
+    "stylus",
+    "cli",
+    "deployment"
+  ],
+  "license": "MIT"
+}
