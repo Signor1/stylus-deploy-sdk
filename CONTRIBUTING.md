@@ -31,6 +31,7 @@ pnpm test
 ## Project Structure
 
 This is a monorepo using:
+
 - **pnpm workspaces** for package management
 - **Turborepo** for build orchestration
 - **Changesets** for version management
@@ -59,6 +60,7 @@ git checkout -b fix/your-bug-fix
 ### 2. Make Changes
 
 Follow the coding standards:
+
 - Use TypeScript for SDK code
 - Use Solidity 0.8.24+ for Solidity contracts
 - Use Rust 1.81+ for Stylus contracts
@@ -102,6 +104,7 @@ git commit -m "fix: resolve bug"
 ```
 
 Commit message format:
+
 - `feat:` New feature
 - `fix:` Bug fix
 - `docs:` Documentation changes
@@ -122,6 +125,7 @@ Then create a Pull Request on GitHub.
 ### Contracts Package
 
 **Stylus Contracts (Rust):**
+
 ```bash
 cd packages/contracts/stylus/templates/token
 cargo build --target wasm32-unknown-unknown
@@ -129,6 +133,7 @@ cargo test
 ```
 
 **Solidity Contracts:**
+
 ```bash
 cd packages/contracts/solidity
 forge build
@@ -235,6 +240,7 @@ pnpm format
 ## Versioning
 
 We use [Semantic Versioning](https://semver.org/):
+
 - **MAJOR**: Breaking changes
 - **MINOR**: New features (backward compatible)
 - **PATCH**: Bug fixes (backward compatible)
