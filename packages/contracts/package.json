@@ -6,6 +6,8 @@
   "scripts": {
     "build": "echo 'Building contracts...'",
     "test": "echo 'Testing contracts...'",
+    "lint": "echo 'Contracts - skipping lint (handled by Foundry/Cargo)'",
+    "typecheck": "echo 'Contracts - skipping typecheck (handled by Foundry/Cargo)'",
     "clean": "rm -rf target cache out"
   }
 }
