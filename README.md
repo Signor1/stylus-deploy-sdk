@@ -59,11 +59,11 @@ stylus-deploy-sdk/
 
 ## Packages
 
-| Package | Description | Version |
-|---------|-------------|---------|
-| `@stylus-deploy/sdk` | Core TypeScript SDK | - |
-| `@stylus-deploy/cli` | CLI tools | - |
-| `@stylus-deploy/contracts` | Smart contracts | - |
+| Package                    | Description         | Version |
+| -------------------------- | ------------------- | ------- |
+| `@stylus-deploy/sdk`       | Core TypeScript SDK | -       |
+| `@stylus-deploy/cli`       | CLI tools           | -       |
+| `@stylus-deploy/contracts` | Smart contracts     | -       |
 
 ## Quick Start
 
@@ -85,18 +85,18 @@ const signer = await provider.getSigner();
 const sdk = new StylusDeploySDK({
   provider,
   signer,
-  network: 'arbitrum-sepolia'
+  network: 'arbitrum-sepolia',
 });
 
 // Deploy from template
 const result = await sdk.deployFromTemplate({
   templateId: TEMPLATES.ERC20,
   initParams: {
-    name: "My Token",
-    symbol: "MTK",
+    name: 'My Token',
+    symbol: 'MTK',
     decimals: 18,
-    totalSupply: "1000000"
-  }
+    totalSupply: '1000000',
+  },
 });
 
 console.log(`Token deployed at: ${result.address}`);
@@ -115,11 +115,11 @@ function DeployToken() {
     await deploy({
       templateId: TEMPLATES.ERC20,
       initParams: {
-        name: "My Token",
-        symbol: "MTK",
+        name: 'My Token',
+        symbol: 'MTK',
         decimals: 18,
-        totalSupply: "1000000"
-      }
+        totalSupply: '1000000',
+      },
     });
   };
 
@@ -162,6 +162,7 @@ pnpm dev
 ### Repository Structure
 
 This is a monorepo managed with:
+
 - **pnpm workspaces** for package management
 - **Turborepo** for build orchestration
 - **Changesets** for version management

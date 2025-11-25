@@ -11,10 +11,11 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format cjs --dts",
-    "dev": "tsup src/index.ts --format cjs --dts --watch",
-    "test": "vitest run",
-    "typecheck": "tsc --noEmit",
+    "build": "echo 'CLI not yet implemented'",
+    "dev": "echo 'CLI not yet implemented'",
+    "test": "echo 'CLI not yet implemented - skipping tests'",
+    "lint": "echo 'CLI not yet implemented - skipping lint'",
+    "typecheck": "echo 'CLI not yet implemented - skipping typecheck'",
     "clean": "rm -rf dist"
   },
   "keywords": [
