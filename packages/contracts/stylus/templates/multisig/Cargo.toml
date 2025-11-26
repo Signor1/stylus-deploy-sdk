@@ -1,0 +1,25 @@
+[package]
+name = "stylus-multisig-template"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+authors = ["Signordev"]
+description = "Multisig wallet template for Arbitrum Stylus"
+
+[dependencies]
+stylus-sdk = "0.6"
+alloy-primitives = "0.7"
+alloy-sol-types = "0.7"
+
+[features]
+export-abi = ["stylus-sdk/export-abi"]
+
+[profile.release]
+codegen-units = 1
+strip = true
+lto = true
+panic = "abort"
+opt-level = "z"
+
+[lib]
+crate-type = ["cdylib"]
