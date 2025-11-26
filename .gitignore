@@ -55,3 +55,5 @@ lerna-debug.log*
 cache/
 broadcast/
 deployments/
+
+PROJECT_ROADMAP.md
